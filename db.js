@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-var mongoURL = "mongodb+srv://itsme:notok@cluster0.gpfej.mongodb.net/mern-rooms?retryWrites=true&w=majority";
+var mongoURL = process.env.MONGOLAB_URI;
 
 mongoose.connect(mongoURL, {useNewUrlParser: true, useUnifiedTopology: true});
 
