@@ -3,7 +3,13 @@ const express = require("express");
 const app = express();
 const cors = require('cors')
 
-app.options('*', cors()) 
+
+const corsOptions = {
+    origin: 'https://sad-euclid-ca5ec7.netlify.app/'
+  }
+app.options('*', cors(corsOptions)) 
+
+
 
 
 const dotenv = require("dotenv")
