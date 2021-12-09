@@ -28,7 +28,6 @@ app.use('/api/users', usersRoute)
 app.use('/api/bookings', bookingsRoute)
 
 
-console.log(process.env.MONGOLAB_URI)
 
 const port = process.env.PORT || 5000;
 

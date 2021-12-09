@@ -9,6 +9,7 @@ router.get("/getallrooms", async (req, res) => {
    
      try {
           const rooms = await Room.find({}) // pass an empty object
+          // to get all the rooms
           console.log(rooms);
      res.send(rooms)
      // return res.json({rooms});
