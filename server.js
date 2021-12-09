@@ -3,15 +3,7 @@ const express = require("express");
 const app = express();
 const cors = require('cors')
 
-// app.use(
-//       cors(
-//       // // origin:"http://localhost:3000",
-//       // origin:"*",
-// )
-// )
-// app.post('http://localhost:5000/api/users/register',(req, res) => {
-//       console.log(req)
-// })
+app.options('*', cors()) 
 
 
 const dotenv = require("dotenv")
