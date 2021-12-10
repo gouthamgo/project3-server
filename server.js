@@ -3,13 +3,15 @@ const express = require("express");
 const app = express();
 const cors = require('cors')
 
-
-const corsOptions = {
-    origin: 'https://sad-euclid-ca5ec7.netlify.app/'
-  }
-app.options('*', cors(corsOptions)) 
-
-
+// app.use(
+//       cors(
+//       // // origin:"http://localhost:3000",
+//       // origin:"*",
+// )
+// )
+// app.post('http://localhost:5000/api/users/register',(req, res) => {
+//       console.log(req)
+// })
 
 
 const dotenv = require("dotenv")
@@ -32,7 +34,6 @@ const bookingsRoute = require('./routes/bookingsRoute')
 app.use('/api/rooms', roomsRoute)
 app.use('/api/users', usersRoute)
 app.use('/api/bookings', bookingsRoute)
-
 
 
 const port = process.env.PORT || 5000;
